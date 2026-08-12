@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security reporting / 安全回報
+    url: https://github.com/johnex2x/Game-Mass-Translator/security/advisories/new
+    about: Use private vulnerability reporting. / 請使用私人漏洞回報。

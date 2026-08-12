@@ -1,0 +1,50 @@
+name: Bug report / 錯誤回報
+description: Report a reproducible problem without sharing private game data. / 回報可重現問題，請勿分享私人遊戲資料。
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not attach a game, unreleased content, private project, API key, or sensitive log.
+        請勿附上遊戲本體、未公開內容、私人專案、API 金鑰或敏感紀錄。
+  - type: input
+    id: version
+    attributes:
+      label: App version / 程式版本
+      placeholder: "1.6.1"
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version / Windows 版本
+      placeholder: "Windows 11 x64"
+    validations:
+      required: true
+  - type: dropdown
+    id: workflow
+    attributes:
+      label: Workflow / 工作流程
+      options:
+        - Ren'Py
+        - Unity XUnity.AutoTranslator
+        - Unity Naninovel
+        - Unity Mono static patch
+        - Translator++ / MTool
+        - Startup / UI
+        - Other / 其他
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction / 重現步驟
+      description: Include sanitized steps, expected result, and actual result. / 請提供去識別化步驟、預期與實際結果。
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized logs / 已去識別紀錄
+      description: Remove usernames, private paths, game text, tokens, and keys. / 移除使用者名稱、私人路徑、遊戲文字、token 與金鑰。

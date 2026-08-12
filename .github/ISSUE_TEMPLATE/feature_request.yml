@@ -1,0 +1,22 @@
+name: Feature request / 功能建議
+description: Suggest a user-facing improvement. / 建議終端使用者功能改善。
+title: "[Feature] "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include game files or private project data.
+        請勿附上遊戲檔案或私人專案資料。
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / 要解決的問題
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal / 建議方案
+    validations:
+      required: true
