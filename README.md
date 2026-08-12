@@ -21,6 +21,11 @@ Game Mass Translator 是一套 Windows 遊戲翻譯工具，讓你把不同遊�
 3. 按「網頁批次翻譯」大圖示，將批次交給你選擇的網頁 AI，再把完整結果貼回工具。
 4. 檢查譯文並標記 V，按「安裝到遊戲」大圖示，然後進入遊戲確認翻譯。
 
+## 完整教學
+
+- [完整繁中使用手冊](docs/USER_GUIDE.zh-TW.md)
+- [English User Guide](docs/USER_GUIDE.en.md)
+
 ## 支援來源
 
 - Ren'Py
@@ -28,10 +33,8 @@ Game Mass Translator 是一套 Windows 遊戲翻譯工具，讓你把不同遊�
 - Translator++ `.trans`
 - MTool JSON
 
-## 文件與協助
+## 其他連結
 
-- [完整繁中使用手冊](docs/USER_GUIDE.zh-TW.md)
-- [English User Guide](docs/USER_GUIDE.en.md)
 - [隱私說明](PRIVACY.md)
 - [軟體使用與散布條款](LICENSE.md)
 - [安全問題回報](SECURITY.md)

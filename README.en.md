@@ -21,6 +21,11 @@ Current version: **1.6.9**. [Download the latest version](https://github.com/joh
 3. Click the large **Web Batch Translation** icon, send the batch to your chosen web AI, and paste the complete result back into the tool.
 4. Review the translations, mark approved entries V, click the large **Install Translation to Game** icon, and verify the result in the game.
 
+## Full guides
+
+- [完整繁中使用手冊](docs/USER_GUIDE.zh-TW.md)
+- [Complete English user guide](docs/USER_GUIDE.en.md)
+
 ## Supported sources
 
 - Ren'Py
@@ -28,10 +33,8 @@ Current version: **1.6.9**. [Download the latest version](https://github.com/joh
 - Translator++ `.trans`
 - MTool JSON
 
-## Documentation and support
+## Other links
 
-- [完整繁中使用手冊](docs/USER_GUIDE.zh-TW.md)
-- [Complete English user guide](docs/USER_GUIDE.en.md)
 - [Privacy](PRIVACY.md)
 - [Software Use and Distribution Terms](LICENSE.md)
 - [Security reporting](SECURITY.md)
