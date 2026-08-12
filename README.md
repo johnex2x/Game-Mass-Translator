@@ -6,7 +6,7 @@ Game Mass Translator 是一套 Windows 遊戲翻譯工具，讓你把不同遊�
 
 目前版本：**1.6.9**。[下載最新版本](https://github.com/johnex2x/Game-Mass-Translator/releases)
 
-![Game Mass Translator 主畫面與翻譯審核表格](assets/02-project-review.jpg)
+![Game Mass Translator 完整主畫面與翻譯審核表格](assets/main-window.jpg)
 
 ## 特色
 
