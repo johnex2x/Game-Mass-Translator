@@ -32,7 +32,7 @@ Game Mass Translator is a proprietary application. The following components are 
 | PyInstaller bootloader | 6.21.0 | GPLv2-or-later with the PyInstaller exception for distributing non-free programs; [全文 / full text](#pyinstaller) |
 | AssetsTools.NET helpers | 3.0.4 / 3.0.2 | MIT; [全文 / full text](#assetstoolsnet), [全文 / full text](#assetstoolsnetaddressables) |
 | System.IO.Hashing helper dependency | 9.0.4 | MIT; [全文 / full text](#systemiohashing) |
-| .NET 9 runtime, embedded in the self-contained `NaninovelRepacker.exe` helper | .NET 9 (built with SDK 9.0.316) | Microsoft .NET Library license; [全文 / full text](#dotnet-runtime) |
+| .NET 9 runtime, embedded in the self-contained `NaninovelRepacker.exe` helper | .NET 9 (built with SDK 9.0.317) | Microsoft .NET Library license; [全文 / full text](#dotnet-runtime) |
 | jf-openhuninn font | 2.1 | SIL Open Font License 1.1; [全文 / full text](#ofl-11) |
 
 The executable does **not** bundle the FMOD Engine or any `fmod` binary; audio-format helpers of UnityPy that would require it are not shipped.
