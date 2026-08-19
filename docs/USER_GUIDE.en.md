@@ -23,18 +23,16 @@ Manual web translation means that you personally paste source text into a web AI
 
 ## 2. Complete your first translation
 
-This section is the full beginner path: create a project, translate batches manually, review them, and install the result. The screenshots use the Traditional Chinese interface; switch languages from **Tools → Language / 語言** if needed.
+This section is the full beginner path: create a project, translate batches manually, review them, and install the result. The screenshots use the Traditional Chinese interface; switch languages from **Tools → Language / 語言** if needed. Use **View → Dark Mode** for the Slate night theme.
 
 ### Step 1: Start and create a project
 
 1. Extract the official ZIP and run the versioned EXE.
-2. Click the create-project toolbar button, or open **Tools → Create Project from Game…**.
-3. Click **Browse…** beside **Game folder** and select the game root. Do not select a save-game subfolder.
-4. Check the detected type, then click **Start**. The tool chooses a Ren'Py, Unity, Translator++ `.trans`, or MTool JSON workflow from the folder contents.
+2. Click the leftmost create-project toolbar button, or open **Tools → Create Project from Game…**.
+3. Choose the project type first: MTool (`ManualTransFile.json`), Translator++ (`.trans`), Unity, or Ren'Py. For games, select the game root — not a save-game subfolder.
+4. After a matching file or folder is chosen, the tool starts that type's create flow immediately.
 
-![「從遊戲建立專案」(Create Project from Game): choose a game folder and confirm the detected type](../assets/01-create-project.jpg)
-
-If the root contains both a Translator++ `.trans` file and `ManualTransFile.json`, the tool asks which external project to import before engine detection. External projects take priority over engine detection.
+![「從遊戲建立專案」(Create Project from Game): choose a project type first](../assets/01-create-project.jpg)
 
 ### Step 2: Confirm the project and language direction
 
@@ -158,7 +156,7 @@ Use the context/source/translation filters at the top to narrow the current rang
 
 ## 6. Engine routing and input preparation
 
-Use this table to choose a route. If you are unsure, select the game root and let the tool report the detected type instead of guessing individual files.
+Use this table to choose a route, then pick that type in the create dialog: MTool/Translator++ take a file; Unity/Ren'Py take the game root. A mismatched type is rejected.
 
 | Source | Create project from | Basic output/install | Important boundary |
 |---|---|---|---|
@@ -166,8 +164,8 @@ Use this table to choose a route. If you are unsure, select the game root and le
 | Unity/XUnity.AutoTranslator | A Unity folder containing `<Game>_Data` | XUAT dictionary and config | `*_Data` is read-only by default; missing runtime downloads require consent |
 | Unity/Naninovel | A Unity IL2CPP x64 game whose text map is verified | `*_Data/StreamingAssets/aa` and required bridges | Direct mode is offered only after verification; first launch may build a cache |
 | Unity Mono static patch | A folder with a verified Mono target | Protected target resource files | Advanced, writes `*_Data`, and requires consent plus a pristine backup |
-| Translator++ `.trans` | A `.trans` file at the game-folder root | A new `_translated.trans` file | Translator++ writes the game; the source `.trans` stays unchanged |
-| MTool JSON | `ManualTransFile.json` at the root | `<Game>_translated.json` | Only JSON values are changed; the source JSON stays unchanged |
+| Translator++ `.trans` | A chosen `.trans` project file | A new `_translated.trans` file | Translator++ writes the game; the source `.trans` stays unchanged |
+| MTool JSON | A chosen `ManualTransFile.json` | `<Game>_translated.json` | Only JSON values are changed; the source JSON stays unchanged |
 
 ### 6.1 Ren'Py
 

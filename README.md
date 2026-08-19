@@ -22,13 +22,13 @@ Get-FileHash ".\Game-Mass-Translator-v1.7.2-win-x64.zip" -Algorithm SHA256
 
 以下流程以「手動網頁 AI 翻譯」為第一次使用的建議路線；CLI 與 Agent 自動翻譯請先完成這條流程，再參考使用手冊的進階章節。
 
-1. 從「工具 → 從遊戲建立專案…」選取遊戲資料夾。工具會自動辨識支援的引擎或外部專案，建立 `.rpytrans` 專案。
+1. 按工具列最左邊的建立圖示（或「工具 → 從遊戲建立專案…」），先選專案類型再選對應的 JSON／`.trans`／遊戲資料夾，建立 `.rpytrans` 專案。
 2. 在主表格檢查原文與譯文，必要時直接編輯；尚未建立專案時不會修改遊戲來源。
 3. 開啟「網頁批次翻譯」，按「複製」，把批次貼到你使用的網頁 AI（例如 Gemini），再把完整回覆貼回右側，按「分析結果並處理下一批」。
 4. 逐筆複查結果。只把確定要寫入遊戲的列標記為 **V（確定）**；X 代表需要重翻，I 代表刻意忽略。
 5. 按「安裝到遊戲」，確認安裝摘要中的目標資料夾、檔案數與警告，完成後啟動遊戲並切換到目標語言。
 
-![建立專案對話框：選擇遊戲資料夾後按「開始」](assets/01-create-project.jpg)
+![建立專案：先選擇專案類型](assets/01-create-project.jpg)
 
 ![主表格：檢查原文、譯文與 V/X/I 標記](assets/02-project-review.jpg)
 
@@ -80,13 +80,13 @@ The initial public build is unsigned, so Windows may show Unknown Publisher or a
 
 The recommended first route is manual web-based AI translation. Finish this route once before trying the optional CLI or Agent automation.
 
-1. Choose **Tools → Create Project from Game…** and select the game folder. The tool detects a supported engine or external project and creates a `.rpytrans` project.
+1. Click the leftmost create-project toolbar button (or **Tools → Create Project from Game…**), choose the project type, then pick the matching JSON / `.trans` / game folder to create a `.rpytrans` project.
 2. Review the source and translation columns in the main table and edit entries when needed. Project creation and editing do not modify the game source.
 3. Open **Web Batch Translation**, click **Copy**, paste the batch into the web AI service you use (for example, Gemini), then paste the complete reply into the right pane and click **Analyze Result and Next Batch**.
 4. Review the result entry by entry. Mark only entries you want written to the game as **V (Confirmed)**; X means translate again and I means intentionally ignore.
 5. Click **Install Translation to Game**, verify the destination, file count, and warnings in the summary, then launch the game and switch to the target language.
 
-![Create Project dialog: choose a game folder and click Start](assets/01-create-project.jpg)
+![Create Project: choose a project type first](assets/01-create-project.jpg)
 
 ![Main table: review source, translations, and V/X/I marks](assets/02-project-review.jpg)
 

@@ -23,18 +23,16 @@ Game Mass Translator 會把遊戲文字和必要的來源快照整理成一個 `
 
 ## 2. 從零完成第一次翻譯
 
-以下步驟以「建立專案 → 手動批次翻譯 → 審核 → 安裝」為完整主線。示範畫面使用繁中介面；英文介面可由「工具 → 語言 / Language」切換。
+以下步驟以「建立專案 → 手動批次翻譯 → 審核 → 安裝」為完整主線。示範畫面使用繁中介面；英文介面可由「工具 → 語言 / Language」切換。夜間可開「檢視 → 深色模式」。
 
 ### 步驟 1：啟動並建立專案
 
 1. 從官方 ZIP 解壓縮後執行版本化的 EXE。
-2. 按工具列的建立圖示，或開啟「工具 → 從遊戲建立專案…」。
-3. 在「遊戲資料夾」按「瀏覽…」，選取遊戲根目錄，不要選到只包含某個存檔的子資料夾。
-4. 確認視窗顯示的偵測類型，再按「開始」。工具會依根目錄內容選擇 Ren'Py、Unity、Translator++ `.trans` 或 MTool JSON 流程。
+2. 按工具列最左邊的建立圖示，或開啟「工具 → 從遊戲建立專案…」。
+3. 先選擇專案類型：MTool 選 `ManualTransFile.json`、Translator++ 選 `.trans`、Unity 或 Ren'Py 選遊戲根目錄。不要選到只包含某個存檔的子資料夾。
+4. 選完且類型符合後，工具會直接進入對應的建立流程。
 
-![從遊戲建立專案：選取遊戲資料夾並確認偵測類型](../assets/01-create-project.jpg)
-
-如果資料夾根目錄同時有 Translator++ `.trans` 與 `ManualTransFile.json`，工具會先讓你選擇要匯入哪一種外部專案；外部專案會優先於引擎自動偵測。
+![從遊戲建立專案：先選擇專案類型](../assets/01-create-project.jpg)
 
 ### 步驟 2：確認專案與語言方向
 
@@ -158,7 +156,7 @@ Game Mass Translator 會把遊戲文字和必要的來源快照整理成一個 `
 
 ## 6. 引擎分流與輸入準備
 
-先用下表判斷路線；不確定時只選遊戲根目錄，讓工具顯示偵測結果，不要手動猜檔案。
+先用下表判斷路線，再在建立視窗選對應類型：MTool／Translator++ 選檔案，Unity／Ren'Py 選遊戲根目錄。選錯類型會被拒絕。
 
 | 來源 | 建立專案時選什麼 | 基本輸出／安裝 | 重要限制 |
 |---|---|---|---|
@@ -166,8 +164,8 @@ Game Mass Translator 會把遊戲文字和必要的來源快照整理成一個 `
 | Unity／XUnity.AutoTranslator | 含 `<遊戲名>_Data` 的 Unity 遊戲 | XUAT 字典與設定檔 | `*_Data` 預設唯讀；缺 runtime 時需明確確認下載 |
 | Unity／Naninovel | 通過 text map 結構驗證的 Unity IL2CPP x64 遊戲 | `*_Data/StreamingAssets/aa` 及必要 bridge | 只在結構確認後提供直接模式；首次啟動可能建立快取 |
 | Unity Mono 靜態修補 | 工具顯示可驗證的 Mono 目標 | 受保護的目標資源檔 | 進階且會寫入 `*_Data`，需要明確確認與 pristine 備份 |
-| Translator++ `.trans` | 遊戲資料夾根目錄的 `.trans` | 輸出新的 `_translated.trans` | 回寫遊戲由 Translator++ 完成；原 `.trans` 不變 |
-| MTool JSON | 根目錄的 `ManualTransFile.json` | `<遊戲>_translated.json` | 只改 JSON 值；原始 JSON 不變 |
+| Translator++ `.trans` | 選擇 `.trans` 專案檔 | 輸出新的 `_translated.trans` | 回寫遊戲由 Translator++ 完成；原 `.trans` 不變 |
+| MTool JSON | 選擇 `ManualTransFile.json` | `<遊戲>_translated.json` | 只改 JSON 值；原始 JSON 不變 |
 
 ### 6.1 Ren'Py
 
