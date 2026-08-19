@@ -6,14 +6,14 @@
 
 Game Mass Translator 是 Windows 桌面工具，將 Ren'Py、Unity／XUnity.AutoTranslator、Unity／Naninovel、Translator++ `.trans` 與 MTool JSON 的遊戲文字整理成可追蹤的 `.rpytrans` 專案，讓你翻譯、審核，再安裝到自己的遊戲或輸出玩家包。
 
-目前公開版本：**1.7.1**（Windows 11 x64 驗證）。
+目前公開版本：**1.7.2**（Windows 11 x64 驗證）。
 
 ### 下載與安全啟動
 
-請只從 [官方 Releases](https://github.com/johnex2x/Game-Mass-Translator/releases) 下載 ZIP。下載後先在 Release 頁面核對 SHA-256 與檔案大小，再解壓縮並執行 `Game Mass Translator 1.7.1.exe`：
+請只從 [官方 Releases](https://github.com/johnex2x/Game-Mass-Translator/releases) 下載 ZIP。下載後先在 Release 頁面核對 SHA-256 與檔案大小，再解壓縮並執行 `Game Mass Translator 1.7.2.exe`：
 
 ```powershell
-Get-FileHash ".\Game-Mass-Translator-v1.7.1-win-x64.zip" -Algorithm SHA256
+Get-FileHash ".\Game-Mass-Translator-v1.7.2-win-x64.zip" -Algorithm SHA256
 ```
 
 初始公開版本未簽署，Windows 可能顯示 Unknown Publisher 或 SmartScreen 警告。請核對雜湊，不要為了繞過警告而停用 Windows 安全功能。
@@ -64,14 +64,14 @@ Get-FileHash ".\Game-Mass-Translator-v1.7.1-win-x64.zip" -Algorithm SHA256
 
 Game Mass Translator is a Windows desktop tool that turns text from Ren'Py, Unity/XUnity.AutoTranslator, Unity/Naninovel, Translator++ `.trans`, and MTool JSON projects into a traceable `.rpytrans` project. You can translate, review, install to your own game, or export a player package.
 
-Current public version: **1.7.1**, validated on Windows 11 x64.
+Current public version: **1.7.2**, validated on Windows 11 x64.
 
 ### Download and safe startup
 
-Download the ZIP only from the [official Releases](https://github.com/johnex2x/Game-Mass-Translator/releases). Compare the SHA-256 and file size shown on the Release page before extracting and running `Game Mass Translator 1.7.1.exe`:
+Download the ZIP only from the [official Releases](https://github.com/johnex2x/Game-Mass-Translator/releases). Compare the SHA-256 and file size shown on the Release page before extracting and running `Game Mass Translator 1.7.2.exe`:
 
 ```powershell
-Get-FileHash ".\Game-Mass-Translator-v1.7.1-win-x64.zip" -Algorithm SHA256
+Get-FileHash ".\Game-Mass-Translator-v1.7.2-win-x64.zip" -Algorithm SHA256
 ```
 
 The initial public build is unsigned, so Windows may show Unknown Publisher or a SmartScreen warning. Verify the hash; do not disable Windows security features to bypass the warning.
