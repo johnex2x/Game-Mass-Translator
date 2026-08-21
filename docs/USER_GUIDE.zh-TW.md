@@ -28,9 +28,11 @@ Game Mass Translator 會把遊戲文字和必要的來源快照整理成一個 `
 ### 步驟 1：啟動並建立專案
 
 1. 從官方 ZIP 解壓縮後執行版本化的 EXE。
-2. 按工具列最左邊的建立圖示，或開啟「工具 → 從遊戲建立專案…」。
+2. 按工具列最左邊的建立圖示，或開啟「檔案 → 從遊戲建立專案…」。
 3. 先選擇專案類型：MTool 選 `ManualTransFile.json`、Translator++ 選 `.trans`、Unity 或 Ren'Py 選遊戲根目錄。不要選到只包含某個存檔的子資料夾。
 4. 選完且類型符合後，工具會直接進入對應的建立流程。
+
+外觀與語言分開設定：從「檢視 → 深色模式」（English 介面為 **View → Dark Mode**）即可切換 Slate 深色模式。它會套用到主視窗、目前已開啟的文字編輯框，以及之後新開的對話視窗；settings 的 `appearance` 設定會獨立保存，與介面語言無關，重新啟動程式後仍會沿用。
 
 ![從遊戲建立專案：先選擇專案類型](../assets/01-create-project.jpg)
 
@@ -92,7 +94,7 @@ Game Mass Translator 會把遊戲文字和必要的來源快照整理成一個 `
 
 ### 3.2 編輯規則
 
-- 原文欄是來源快照，不能直接改；需要修正來源時請重新建立或重新匯入專案。
+- 原文欄是來源快照，不能直接改；需要修正來源時請重新建立專案，再從「工具 → 匯入翻譯 → 匯入其他專案譯文…」帶回可重新確認的舊譯文。
 - 完整譯文窗格支援右鍵複製、剪下與貼上；框選文字後可以加入術語。
 - 內嵌換行與反斜線是資料的一部分。批次中的 `\n` 是可逆表示，貼回後工具會還原；不要自行合併或拆開詞條。
 - 保存新譯文會清除 V／X，讓你重新複查；I 會保留，因為它代表刻意不輸出。
@@ -118,7 +120,7 @@ Game Mass Translator 會把遊戲文字和必要的來源快照整理成一個 `
 
 ### 4.1 CLI 自動翻譯（選用）
 
-在網頁批次視窗按「CLI 自動翻譯…」。先重新偵測後端，選擇你已自行安裝並登入的官方 CLI（Claude Code、Codex CLI、Grok Build 或 Google Antigravity），再選目前範圍／整個專案、每批筆數、每批字數與重試次數。
+在網頁批次視窗按「CLI 自動翻譯…」。先重新偵測後端，選擇你已自行安裝並登入的官方 CLI（Claude Code、Codex CLI、Grok Build、OpenCode 或 Google Antigravity），再選目前範圍／整個專案、每批筆數、每批字數與重試次數。
 
 ![CLI 自動翻譯：確認後端、範圍、批次上限與重試次數](../assets/06-cli-automatic.jpg)
 
@@ -169,11 +171,11 @@ Game Mass Translator 會把遊戲文字和必要的來源快照整理成一個 `
 
 ### 6.1 Ren'Py
 
-工具可讀取 loose 或 RPA 來源，並保留不可變的 built-in baseline。安裝會建立語言 overlay，不會重打包原 RPA；如果你選擇替換既有 loose locale，工具會要求明確同意並先建立可驗證備份。重新匯入時若來源或 identifier 改變，請在衝突清單逐項保留、複製或 dismiss，未解決的衝突不會進入安裝。
+工具可讀取 loose 或 RPA 來源，並保留不可變的 built-in baseline。安裝會建立語言 overlay，不會重打包原 RPA；如果你選擇替換既有 loose locale，工具會要求明確同意並先建立可驗證備份。來源或 identifier 改變時，請用「檔案 → 從遊戲建立專案…」建立新專案，再用「工具 → 匯入翻譯 → 匯入其他專案譯文…」帶回可重新確認的舊譯文。
 
 ### 6.2 Unity／XUnity.AutoTranslator
 
-一般路線輸出 sidecar 字典與必要的 `AutoTranslatorConfig.ini` 變更，設定檔會留下 `.bak`。缺少 BepInEx／XUnity 時，只有在你確認後才會下載固定版本並驗證 SHA-256。中文缺字時依安裝摘要選擇 TTFLoader、MoeFont 或 yozai 路線；字型失敗不會抹掉已完成的字典安裝。
+一般路線輸出 sidecar 字典與必要的 `AutoTranslatorConfig.ini` 變更，設定檔會留下 `.bak`。缺少 BepInEx／XUnity 時，只有在你確認後才會下載固定版本並驗證 SHA-256。遊戲執行後產生的 XUAT 未翻譯清單，可從「工具 → 匯入翻譯 → 匯入遊戲內未翻譯文字（XUAT）…」審核匯回；中文缺字時依安裝摘要選擇 TTFLoader、MoeFont 或 yozai 路線；字型失敗不會抹掉已完成的字典安裝。
 
 ### 6.3 Naninovel 與 Unity Mono
 

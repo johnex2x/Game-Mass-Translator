@@ -28,9 +28,11 @@ This section is the full beginner path: create a project, translate batches manu
 ### Step 1: Start and create a project
 
 1. Extract the official ZIP and run the versioned EXE.
-2. Click the leftmost create-project toolbar button, or open **Tools → Create Project from Game…**.
+2. Click the create-project toolbar button, or open **File → Create Project from Game…**.
 3. Choose the project type first: MTool (`ManualTransFile.json`), Translator++ (`.trans`), Unity, or Ren'Py. For games, select the game root — not a save-game subfolder.
 4. After a matching file or folder is chosen, the tool starts that type's create flow immediately.
+
+Appearance and interface language are separate settings. Use **View → Dark Mode** (檢視 → 深色模式) to switch to the Slate dark appearance. It applies to the main window, currently open text editors, and dialogs opened afterward. The settings `appearance` value is saved independently of interface language, so it is restored on later launches.
 
 ![「從遊戲建立專案」(Create Project from Game): choose a project type first](../assets/01-create-project.jpg)
 
@@ -92,7 +94,7 @@ The left file tree, context/source/translation filters, and status dropdown form
 
 ### 3.2 Editing rules
 
-- The Source column is a snapshot and cannot be edited directly. Recreate or re-import a project when the source itself changes.
+- The Source column is a snapshot and cannot be edited directly. When the source changes, create a new project and use **Tools → Import Translations → Import Translations from Another Project…** to bring back translations for review.
 - The full translation pane supports right-click copy, cut, and paste. Select one line and use **Add Glossary Term** to create a term.
 - Embedded newlines and backslashes are data. In a batch, `\n` is a reversible representation; the tool restores it when the result is pasted back. Do not merge or split entries yourself.
 - Saving a new translation clears V and X so you review it again. I remains because it represents an intentional decision not to output.
@@ -118,7 +120,7 @@ All three methods share batch validation, glossary accumulation, and the rule th
 
 ### 4.1 CLI automatic translation (optional)
 
-Click **CLI Automatic Translation…** in the web batch window. Refresh detection, choose an official CLI that you installed and signed into yourself (Claude Code, Codex CLI, Grok Build, or Google Antigravity), then choose the current range or whole project, per-batch entry and character limits, and retry count.
+Click **CLI Automatic Translation…** in the web batch window. Refresh detection, choose an official CLI that you installed and signed into yourself (Claude Code, Codex CLI, Grok Build, OpenCode, or Google Antigravity), then choose the current range or whole project, per-batch entry and character limits, and retry count.
 
 ![「CLI 自動翻譯」(CLI Automatic Translation): confirm the backend, range, batch limits, and retries](../assets/06-cli-automatic.jpg)
 
@@ -169,11 +171,11 @@ Use this table to choose a route, then pick that type in the create dialog: MToo
 
 ### 6.1 Ren'Py
 
-The tool can read loose or RPA sources and preserves an immutable built-in baseline. Installation creates a locale overlay and does not repack the original RPA. Replacing an existing loose locale requires explicit consent and a verified backup. During re-import, source or identifier changes appear as conflicts; unresolved conflicts are not installed.
+The tool can read loose or RPA sources and preserves an immutable built-in baseline. Installation creates a locale overlay and does not repack the original RPA. Replacing an existing loose locale requires explicit consent and a verified backup. If the source or identifier changes, create a new project with **File → Create Project from Game…**, then use **Tools → Import Translations → Import Translations from Another Project…** to bring back translations for review.
 
 ### 6.2 Unity/XUnity.AutoTranslator
 
-The standard route writes a sidecar dictionary and the required `AutoTranslatorConfig.ini` changes, with a `.bak` backup. If BepInEx or XUnity is missing, the tool downloads pinned versions only after you confirm, and verifies their SHA-256. For missing Chinese glyphs, use the installation summary to choose the TTFLoader, MoeFont, or yozai route. A font failure does not erase a completed dictionary installation.
+The standard route writes a sidecar dictionary and the required `AutoTranslatorConfig.ini` changes, with a `.bak` backup. If BepInEx or XUnity is missing, the tool downloads pinned versions only after you confirm, and verifies their SHA-256. After the game produces an XUAT untranslated-text list, review it through **Tools → Import Translations → Import Untranslated Runtime Text (XUAT)…**. For missing Chinese glyphs, use the installation summary to choose the TTFLoader, MoeFont, or yozai route. A font failure does not erase a completed dictionary installation.
 
 ### 6.3 Naninovel and Unity Mono
 

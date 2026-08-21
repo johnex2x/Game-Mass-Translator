@@ -18,7 +18,7 @@ Game Mass Translator 沒有帳號系統、遙測、廣告或自動更新。工�
 
 ### CLI 自動翻譯（選用）
 
-若你自行啟用「CLI 自動翻譯」，工具會執行**你自己安裝並登入的官方 AI CLI**（Claude Code、Codex CLI、Grok Build、Google Antigravity），並把該批次的內容交給它。**這代表你的遊戲原文會離開本機，送到你所選 CLI 背後的服務商。**
+若你自行啟用「CLI 自動翻譯」，工具會執行**你自己安裝並登入的官方 AI CLI**（Claude Code、Codex CLI、Grok Build、OpenCode、Google Antigravity），並把該批次的內容交給它。**這代表你的遊戲原文會離開本機，送到你所選 CLI 背後的服務商。**
 
 - 每批送出的內容只有：**所選原文、提示詞設定，以及命中的術語**。不含遊戲檔案、完整 `.rpytrans` 或其他專案內容。
 - 這個功能預設關閉，必須由你選擇後端並在確認對話框同意才會啟動；對話框會逐字顯示即將執行的程式路徑。
@@ -46,7 +46,7 @@ Manual web batches are not uploaded automatically by this tool; you choose which
 
 ### CLI automatic translation (optional)
 
-If you enable "CLI automatic translation", the tool runs an **official AI CLI that you installed and signed into yourself** (Claude Code, Codex CLI, Grok Build, Google Antigravity) and hands it each batch. **This means your game's source text leaves your machine and reaches the provider behind the CLI you chose.**
+If you enable "CLI automatic translation", the tool runs an **official AI CLI that you installed and signed into yourself** (Claude Code, Codex CLI, Grok Build, OpenCode, Google Antigravity) and hands it each batch. **This means your game's source text leaves your machine and reaches the provider behind the CLI you chose.**
 
 - Each batch carries only the **selected source text, your prompt settings, and matching glossary terms**. It never carries game files, the full `.rpytrans`, or other project content.
 - The feature is off by default. You must choose a backend and accept a confirmation dialog, which shows the exact program path that will be executed.

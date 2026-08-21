@@ -6,14 +6,14 @@
 
 Game Mass Translator 是 Windows 桌面工具，將 Ren'Py、Unity／XUnity.AutoTranslator、Unity／Naninovel、Translator++ `.trans` 與 MTool JSON 的遊戲文字整理成可追蹤的 `.rpytrans` 專案，讓你翻譯、審核，再安裝到自己的遊戲或輸出玩家包。
 
-目前公開版本：**1.7.2**（Windows 11 x64 驗證）。
+目前公開版本：**1.7.3**（Windows 11 x64 驗證）。
 
 ### 下載與安全啟動
 
-請只從 [官方 Releases](https://github.com/johnex2x/Game-Mass-Translator/releases) 下載 ZIP。下載後先在 Release 頁面核對 SHA-256 與檔案大小，再解壓縮並執行 `Game Mass Translator 1.7.2.exe`：
+請只從 [官方 Releases](https://github.com/johnex2x/Game-Mass-Translator/releases) 下載 ZIP。下載後先在 Release 頁面核對 SHA-256 與檔案大小，再解壓縮並執行 `Game Mass Translator 1.7.3.exe`：
 
 ```powershell
-Get-FileHash ".\Game-Mass-Translator-v1.7.2-win-x64.zip" -Algorithm SHA256
+Get-FileHash ".\Game-Mass-Translator-v1.7.3-win-x64.zip" -Algorithm SHA256
 ```
 
 初始公開版本未簽署，Windows 可能顯示 Unknown Publisher 或 SmartScreen 警告。請核對雜湊，不要為了繞過警告而停用 Windows 安全功能。
@@ -22,7 +22,7 @@ Get-FileHash ".\Game-Mass-Translator-v1.7.2-win-x64.zip" -Algorithm SHA256
 
 以下流程以「手動網頁 AI 翻譯」為第一次使用的建議路線；CLI 與 Agent 自動翻譯請先完成這條流程，再參考使用手冊的進階章節。
 
-1. 按工具列最左邊的建立圖示（或「工具 → 從遊戲建立專案…」），先選專案類型再選對應的 JSON／`.trans`／遊戲資料夾，建立 `.rpytrans` 專案。
+1. 按工具列最左邊的建立圖示（或「檔案 → 從遊戲建立專案…」），先選專案類型再選對應的 JSON／`.trans`／遊戲資料夾，建立 `.rpytrans` 專案。
 2. 在主表格檢查原文與譯文，必要時直接編輯；尚未建立專案時不會修改遊戲來源。
 3. 開啟「網頁批次翻譯」，按「複製」，把批次貼到你使用的網頁 AI（例如 Gemini），再把完整回覆貼回右側，按「分析結果並處理下一批」。
 4. 逐筆複查結果。只把確定要寫入遊戲的列標記為 **V（確定）**；X 代表需要重翻，I 代表刻意忽略。
@@ -64,14 +64,14 @@ Get-FileHash ".\Game-Mass-Translator-v1.7.2-win-x64.zip" -Algorithm SHA256
 
 Game Mass Translator is a Windows desktop tool that turns text from Ren'Py, Unity/XUnity.AutoTranslator, Unity/Naninovel, Translator++ `.trans`, and MTool JSON projects into a traceable `.rpytrans` project. You can translate, review, install to your own game, or export a player package.
 
-Current public version: **1.7.2**, validated on Windows 11 x64.
+Current public version: **1.7.3**, validated on Windows 11 x64.
 
 ### Download and safe startup
 
-Download the ZIP only from the [official Releases](https://github.com/johnex2x/Game-Mass-Translator/releases). Compare the SHA-256 and file size shown on the Release page before extracting and running `Game Mass Translator 1.7.2.exe`:
+Download the ZIP only from the [official Releases](https://github.com/johnex2x/Game-Mass-Translator/releases). Compare the SHA-256 and file size shown on the Release page before extracting and running `Game Mass Translator 1.7.3.exe`:
 
 ```powershell
-Get-FileHash ".\Game-Mass-Translator-v1.7.2-win-x64.zip" -Algorithm SHA256
+Get-FileHash ".\Game-Mass-Translator-v1.7.3-win-x64.zip" -Algorithm SHA256
 ```
 
 The initial public build is unsigned, so Windows may show Unknown Publisher or a SmartScreen warning. Verify the hash; do not disable Windows security features to bypass the warning.
@@ -80,7 +80,7 @@ The initial public build is unsigned, so Windows may show Unknown Publisher or a
 
 The recommended first route is manual web-based AI translation. Finish this route once before trying the optional CLI or Agent automation.
 
-1. Click the leftmost create-project toolbar button (or **Tools → Create Project from Game…**), choose the project type, then pick the matching JSON / `.trans` / game folder to create a `.rpytrans` project.
+1. Click the leftmost create-project toolbar button (or **File → Create Project from Game…**), choose the project type, then pick the matching JSON / `.trans` / game folder to create a `.rpytrans` project.
 2. Review the source and translation columns in the main table and edit entries when needed. Project creation and editing do not modify the game source.
 3. Open **Web Batch Translation**, click **Copy**, paste the batch into the web AI service you use (for example, Gemini), then paste the complete reply into the right pane and click **Analyze Result and Next Batch**.
 4. Review the result entry by entry. Mark only entries you want written to the game as **V (Confirmed)**; X means translate again and I means intentionally ignore.
