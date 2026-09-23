@@ -128,7 +128,7 @@ Game Mass Translator 會把遊戲文字和必要的來源快照整理成一個 `
 
 ### 4.2 Agent 自動翻譯（選用）
 
-第一次使用先在 Agent 視窗按「安裝 Agent Skill…」，閱讀並同意安裝到你使用的 coding agent。之後在網頁批次視窗按「Agent 自動翻譯…」，選取範圍、每批上限與重試次數，按「建立並等待 Agent」。
+第一次使用先在 Agent 視窗按「安裝 Agent Skill…」，閱讀並同意安裝到 Claude Code、Codex CLI 或 OpenCode 的 skill 資料夾。之後在網頁批次視窗按「Agent 自動翻譯…」，確認專案的來源與目標語言，選取範圍、每批上限與重試次數，按「建立並等待 Agent」。「複製任務提示」會依專案已確認的語言方向產生。
 
 ![Agent 自動翻譯：建立工作並等待外部 agent 領取批次](../assets/07-agent-automatic.jpg)
 
@@ -170,6 +170,8 @@ Game Mass Translator 會把遊戲文字和必要的來源快照整理成一個 `
 | MTool JSON | 選擇 `ManualTransFile.json` | `<遊戲>_translated.json` | 只改 JSON 值；原始 JSON 不變 |
 
 ### 6.1 Ren'Py
+
+建立新語言時，選單會先顯示原始劇本與內建翻譯各自偵測到的語言。若想使用內建英文翻譯作原文，可選「以內建 english 翻譯作原文」；沒有明確、非空英文對應的條目會省略，建立摘要會列出數量。安裝時仍沿用原始劇本的識別碼與字串鍵值。
 
 工具可讀取 loose 或 RPA 來源，並保留不可變的 built-in baseline。安裝會建立語言 overlay，不會重打包原 RPA；如果你選擇替換既有 loose locale，工具會要求明確同意並先建立可驗證備份。來源或 identifier 改變時，請用「檔案 → 從遊戲建立專案…」建立新專案，再用「工具 → 匯入翻譯 → 匯入其他專案譯文…」帶回可重新確認的舊譯文。
 

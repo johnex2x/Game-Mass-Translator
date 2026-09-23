@@ -128,7 +128,7 @@ Detection reads versions only; it does not send a translation request. The conse
 
 ### 4.2 Agent automatic translation (optional)
 
-On first use, click **Install Agent Skill…** in the Agent window and approve installation into the coding agent you use. Then click **Agent Automatic Translation…** in the web batch window, choose the range, limits, and retries, and click **Create and Wait for Agent**.
+On first use, click **Install Agent Skill…** in the Agent window and approve installation into the Claude Code, Codex CLI, or OpenCode skill directory. Then click **Agent Automatic Translation…** in the web batch window, confirm the project's source and target languages, choose the range, limits, and retries, and click **Create and Wait for Agent**. **Copy Task Prompt** uses the project's confirmed language direction.
 
 ![「Agent 自動翻譯」(Agent Automatic Translation): create a job and wait for the external agent to claim batches](../assets/07-agent-automatic.jpg)
 
@@ -170,6 +170,8 @@ Use this table to choose a route, then pick that type in the create dialog: MToo
 | MTool JSON | A chosen `ManualTransFile.json` | `<Game>_translated.json` | Only JSON values are changed; the source JSON stays unchanged |
 
 ### 6.1 Ren'Py
+
+When creating a new locale, the selection list shows the detected languages of the original script and built-in translations before you choose. To use built-in English as the source text, choose the built-in English source option. Entries without an unambiguous, non-empty English match are omitted and counted in the creation summary. Installation still uses the original script's identifiers and string keys.
 
 The tool can read loose or RPA sources and preserves an immutable built-in baseline. Installation creates a locale overlay and does not repack the original RPA. Replacing an existing loose locale requires explicit consent and a verified backup. If the source or identifier changes, create a new project with **File → Create Project from Game…**, then use **Tools → Import Translations → Import Translations from Another Project…** to bring back translations for review.
 
