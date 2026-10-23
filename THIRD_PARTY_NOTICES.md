@@ -13,6 +13,7 @@ Game Mass Translator is a proprietary application. The following components are 
 | OpenSSL (`libcrypto-3.dll`, `libssl-3.dll`) | bundled with Python 3.11.9 | Apache-2.0; [全文 / full text](#apache-20) |
 | SQLite (`sqlite3.dll`) | bundled with Python 3.11.9 | Public domain; [source](https://www.sqlite.org/copyright.html) |
 | Microsoft Visual C++ runtime (`MSVCP140.dll`, `VCRUNTIME140*.dll`) | bundled with Python 3.11.9 | Microsoft Distributable Code terms in the Windows build section of the Python license, [全文 / full text](#python) |
+| OpenCC character dictionaries (modified conservative lookup) | 1.1.9 | Copyright BYVoid and OpenCC contributors; Apache-2.0; [source](https://github.com/BYVoid/OpenCC/tree/ver.1.1.9/data/dictionary); [全文 / full text](#apache-20) |
 | langdetect | 1.0.9 | Apache-2.0; [source](https://github.com/Mimino666/langdetect); [全文 / full text](#langdetect), [全文 / full text](#langdetect-notice), [全文 / full text](#apache-20) |
 | UnityPy | 1.25.2 | MIT; [source](https://github.com/K0lb3/UnityPy); [全文 / full text](#unitypy) |
 | TypeTreeGeneratorAPI | 0.0.10 | MIT, copyright K0lb3; [全文 / full text](#typetreegeneratorapi) |
@@ -32,7 +33,7 @@ Game Mass Translator is a proprietary application. The following components are 
 | PyInstaller bootloader | 6.21.0 | GPLv2-or-later with the PyInstaller exception for distributing non-free programs; [全文 / full text](#pyinstaller) |
 | AssetsTools.NET helpers | 3.0.4 / 3.0.2 | MIT; [全文 / full text](#assetstoolsnet), [全文 / full text](#assetstoolsnetaddressables) |
 | System.IO.Hashing helper dependency | 9.0.4 | MIT; [全文 / full text](#systemiohashing) |
-| .NET 9 runtime, embedded in the self-contained `NaninovelRepacker.exe` helper | .NET 9 (built with SDK 9.0.318) | Microsoft .NET Library license; [全文 / full text](#dotnet-runtime) |
+| .NET 9 runtime, embedded in the self-contained `NaninovelRepacker.exe` helper | .NET 9 (built with SDK 9.0.319) | Microsoft .NET Library license; [全文 / full text](#dotnet-runtime) |
 | jf-openhuninn font | 2.1 | SIL Open Font License 1.1; [全文 / full text](#ofl-11) |
 
 The executable does **not** bundle the FMOD Engine or any `fmod` binary; audio-format helpers of UnityPy that would require it are not shipped.
