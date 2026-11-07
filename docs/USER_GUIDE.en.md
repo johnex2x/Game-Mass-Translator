@@ -1,6 +1,6 @@
 # Game Mass Translator User Guide
 
-This guide is written for players and first-time translators. Complete section 2 once using manual web-based AI translation before trying CLI, Agent, glossary, or Player Package features.
+This guide is written for players and first-time translators. Complete section 2 once using manual web-based AI translation before trying CLI, API, Agent, glossary, or Player Package features.
 
 ## 1. Before you begin
 
@@ -19,7 +19,7 @@ Project creation, editing, preview, and diagnostics are read-only with respect t
 
 ### 1.3 Privacy before sending text
 
-Manual web translation means that you personally paste source text into a web AI service. CLI and Agent automation send text through the selected tool and the provider behind it. Confirm that you have permission to process the game content and that this complies with the service terms and any confidentiality requirements. See the [Privacy and Network Notice](../PRIVACY.md).
+Manual web translation means that you personally paste source text into a web AI service. CLI, API, and Agent automation send text through the selected tool and the provider behind it. Confirm that you have permission to process the game content and that this complies with the service terms and any confidentiality requirements. See the [Privacy and Network Notice](../PRIVACY.md).
 
 ## 2. Complete your first translation
 
@@ -108,15 +108,16 @@ The left file tree, context/source/translation filters, and status dropdown form
 | I | Ignore | Not written; game keeps original | Skipped |
 | No mark with translation | Translated but unconfirmed | Not written | Waiting for review |
 
-## 4. Three translation methods
+## 4. Four translation methods
 
 | Method | Best for | How text leaves the machine | Main benefit |
 |---|---|---|---|
 | Manual web batch | First-time users and careful review | You copy text to a web AI | Easiest to understand and fully user-controlled |
 | CLI automatic translation | Users already signed into an official CLI | The tool invokes your selected CLI | Repeats batching, writing, and retries automatically |
+| API automatic translation | Users with an API key from an OpenAI-compatible service such as DeepSeek | The tool sends each batch over HTTPS (or http to a local server) to the endpoint you set | No CLI to install; pay per use |
 | Agent automatic translation | Users of Claude Code, Codex CLI, or another coding agent | The agent claims batches through a local endpoint | The agent can resume while the GUI keeps review and install authority |
 
-All three methods share batch validation, glossary accumulation, and the rule that translations remain unconfirmed until you mark V. A project can have only one unfinished automatic job at a time.
+All four methods share batch validation, glossary accumulation, and the rule that translations remain unconfirmed until you mark V. A project can have only one unfinished automatic job at a time.
 
 ### 4.1 CLI automatic translation (optional)
 
@@ -126,7 +127,27 @@ Click **CLI Automatic Translation…** in the web batch window. Refresh detectio
 
 Detection reads versions only; it does not send a translation request. The consent message lists the source text, prompt, and matching terms that will be sent, not the complete `.rpytrans` database. The project is temporarily read-only while running. A failed batch is never partially written. Sign-in, allowance, timeout, and network failures pause without pretending to skip entries. Progress is stored in `.rpytrans` and can resume; automatic translations still require manual review and V marks.
 
-### 4.2 Agent automatic translation (optional)
+### 4.2 API automatic translation (optional)
+
+Use the **Auto-translate (CLI/API)** window. DeepSeek is built in, and you can add other OpenAI-compatible services. You need an API key from that service. Your API account pays for usage.
+
+1. Click **API endpoints…** at the top of the window and select DeepSeek on the left.
+2. Paste your key and click **Save key**. The model is `deepseek-flash` by default.
+3. For another service, click **Add endpoint**, enter the Base URL under **▶ Advanced settings**, then paste its key. Only https is allowed; http is allowed only for local addresses (127.0.0.1, localhost).
+4. Go back to the **Auto-translate (CLI/API)** window, select the API row in the detection table, and click **Test connection**. It fetches the model list, then sends one tiny request that spends a few tokens.
+5. Choose the range, batch limits, and retries, then click **Start auto-translation**.
+
+You enter the key, and the tool stores it encrypted with Windows DPAPI for the current Windows user. The key is never written into the `.rpytrans` project. Another Windows account cannot decrypt it, and on another PC you will usually need to enter it again.
+
+A confirmation window appears before every job. It shows the destination host, the model, and a token estimate. The estimate is only an estimate; the provider's bill is final. The **Spend cap for this job:** field below it is in tokens and is prefilled with 100000. The tool checks the cap before each batch is sent, so the last batch can push the total past the cap.
+
+The tool shows tokens only, not money. Convert them with the provider's pricing page. A reasoning effort other than `none` turns on thinking mode. Thinking is billed as output tokens, cannot be estimated in advance, and can push usage far above the estimate.
+
+**Pause** waits for the current batch to finish. When you resume, the tool asks for a new cap that is higher than the amount used. **Stop now** cancels the batch in progress; the provider may still bill that batch.
+
+The other rules match the CLI route: a batch that fails validation is never partially written, the project is read-only while the job runs, and generated translations stay unconfirmed until you review them and mark V. The API route sends source text straight to the address you set. See the [Privacy and Network Notice](../PRIVACY.md).
+
+### 4.3 Agent automatic translation (optional)
 
 On first use, click **Install Agent Skill…** in the Agent window and approve installation into the Claude Code, Codex CLI, or OpenCode skill directory. Then click **Agent Automatic Translation…** in the web batch window, confirm the project's source and target languages, choose the range, limits, and retries, and click **Create and Wait for Agent**. **Copy Task Prompt** uses the project's confirmed language direction.
 
@@ -221,4 +242,4 @@ Confirm that you have the right to distribute the translation and support files.
 
 **Installation is refused after a game update.** This is usually drift or a baseline mismatch. Keep the old project and backup, create a project for the new version, and import only translations you can review again.
 
-There is no telemetry, account system, or automatic updater. Unity runtime and font downloads happen only after explicit confirmation and are hash-verified. Whether text is sent through a web AI, CLI, or Agent depends on the service you choose. Use [GitHub Issues](https://github.com/johnex2x/Game-Mass-Translator/issues) for public reports after removing game content, private paths, and secrets; use the [private security channel](../SECURITY.md) for vulnerabilities.
+There is no telemetry, account system, or automatic updater. Unity runtime and font downloads happen only after explicit confirmation and are hash-verified. Whether text is sent through a web AI, CLI, API, or Agent depends on the service you choose. Use [GitHub Issues](https://github.com/johnex2x/Game-Mass-Translator/issues) for public reports after removing game content, private paths, and secrets; use the [private security channel](../SECURITY.md) for vulnerabilities.

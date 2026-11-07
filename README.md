@@ -6,21 +6,21 @@
 
 Game Mass Translator 是 Windows 桌面工具，將 Ren'Py、Unity／XUnity.AutoTranslator、Unity／Naninovel、Translator++ `.trans`、MTool JSON 與 Weblate / WebExtension JSON 的遊戲文字整理成可追蹤的 `.rpytrans` 專案，讓你翻譯、審核，再安裝到自己的遊戲或輸出玩家包。
 
-目前公開版本：**1.8.6**（Windows 11 x64 驗證）。
+目前公開版本：**1.8.7**（Windows 11 x64 驗證）。
 
 ### 下載與安全啟動
 
-請只從 [官方 Releases](https://github.com/johnex2x/Game-Mass-Translator/releases) 下載 ZIP。下載後先在 Release 頁面核對 SHA-256 與檔案大小，再解壓縮並執行 `Game Mass Translator 1.8.6.exe`：
+請只從 [官方 Releases](https://github.com/johnex2x/Game-Mass-Translator/releases) 下載 ZIP。下載後先在 Release 頁面核對 SHA-256 與檔案大小，再解壓縮並執行 `Game Mass Translator 1.8.7.exe`：
 
 ```powershell
-Get-FileHash ".\Game-Mass-Translator-v1.8.6-win-x64.zip" -Algorithm SHA256
+Get-FileHash ".\Game-Mass-Translator-v1.8.7-win-x64.zip" -Algorithm SHA256
 ```
 
 初始公開版本未簽署，Windows 可能顯示 Unknown Publisher 或 SmartScreen 警告。請核對雜湊，不要為了繞過警告而停用 Windows 安全功能。
 
 ### 五分鐘快速開始
 
-以下流程以「手動網頁 AI 翻譯」為第一次使用的建議路線；CLI 與 Agent 自動翻譯請先完成這條流程，再參考使用手冊的進階章節。
+以下流程以「手動網頁 AI 翻譯」為第一次使用的建議路線；CLI、API 與 Agent 自動翻譯請先完成這條流程，再參考使用手冊的進階章節。
 
 1. 按工具列最左邊的建立圖示（或「檔案 → 從遊戲建立專案…」），先選專案類型再選對應的 JSON／`.trans`／遊戲資料夾，建立 `.rpytrans` 專案。
 2. 在主表格檢查原文與譯文，必要時直接編輯；尚未建立專案時不會修改遊戲來源。
@@ -49,7 +49,7 @@ Get-FileHash ".\Game-Mass-Translator-v1.8.6-win-x64.zip" -Algorithm SHA256
 
 抽取、編輯、預覽與診斷不會修改遊戲來源。只有你明確執行「安裝到遊戲」或輸出玩家包時，才會寫入指定目標；可修改的設定會先保留備份。
 
-手動網頁翻譯會由你自行把文字貼到你選擇的網頁 AI。選用的 CLI／Agent 自動翻譯也可能把遊戲原文送到其背後的服務商；這些功能預設不會自動替你啟用。詳見[隱私與網路說明](PRIVACY.md)。
+手動網頁翻譯會由你自行把文字貼到你選擇的網頁 AI。選用的 CLI／API／Agent 自動翻譯也可能把遊戲原文送到其背後的服務商；這些功能預設不會自動替你啟用。詳見[隱私與網路說明](PRIVACY.md)。
 
 ### 授權、支援與分享
 
@@ -64,21 +64,21 @@ Get-FileHash ".\Game-Mass-Translator-v1.8.6-win-x64.zip" -Algorithm SHA256
 
 Game Mass Translator is a Windows desktop tool that turns text from Ren'Py, Unity/XUnity.AutoTranslator, Unity/Naninovel, Translator++ `.trans`, MTool JSON, and Weblate / WebExtension JSON projects into a traceable `.rpytrans` project. You can translate, review, install to your own game, or export a player package.
 
-Current public version: **1.8.6**, validated on Windows 11 x64.
+Current public version: **1.8.7**, validated on Windows 11 x64.
 
 ### Download and safe startup
 
-Download the ZIP only from the [official Releases](https://github.com/johnex2x/Game-Mass-Translator/releases). Compare the SHA-256 and file size shown on the Release page before extracting and running `Game Mass Translator 1.8.6.exe`:
+Download the ZIP only from the [official Releases](https://github.com/johnex2x/Game-Mass-Translator/releases). Compare the SHA-256 and file size shown on the Release page before extracting and running `Game Mass Translator 1.8.7.exe`:
 
 ```powershell
-Get-FileHash ".\Game-Mass-Translator-v1.8.6-win-x64.zip" -Algorithm SHA256
+Get-FileHash ".\Game-Mass-Translator-v1.8.7-win-x64.zip" -Algorithm SHA256
 ```
 
 The initial public build is unsigned, so Windows may show Unknown Publisher or a SmartScreen warning. Verify the hash; do not disable Windows security features to bypass the warning.
 
 ### Five-minute quick start
 
-The recommended first route is manual web-based AI translation. Finish this route once before trying the optional CLI or Agent automation.
+The recommended first route is manual web-based AI translation. Finish this route once before trying the optional CLI, API, or Agent automation.
 
 1. Click the leftmost create-project toolbar button (or **File → Create Project from Game…**), choose the project type, then pick the matching JSON / `.trans` / game folder to create a `.rpytrans` project.
 2. Review the source and translation columns in the main table and edit entries when needed. Project creation and editing do not modify the game source.
@@ -107,7 +107,7 @@ For the complete step-by-step guide, engine routing, and troubleshooting, read:
 
 Extraction, editing, preview, and diagnostics do not modify game sources. Files are written only when you explicitly install to a game or export a player package; writable configuration is backed up first.
 
-Manual web translation means that you choose what to paste into your web AI service. Optional CLI and Agent automation can also send game source text to the provider behind the selected service, and are not enabled automatically. See the [Privacy and Network Notice](PRIVACY.md).
+Manual web translation means that you choose what to paste into your web AI service. Optional CLI, API, and Agent automation can also send game source text to the provider behind the selected service, and are not enabled automatically. See the [Privacy and Network Notice](PRIVACY.md).
 
 ### Terms, support, and sharing
 

@@ -29,11 +29,12 @@ Game Mass Translator is a proprietary application. The following components are 
 | fmod-toolkit (Python wrapper only, no FMOD binary) | 0.1.3 | MIT; [source](https://github.com/K0lb3/fmod_toolkit); [全文 / full text](#fmod-toolkit) |
 | pyfmodex (Python wrapper only, no FMOD binary) | 0.7.2 | MIT; [source](https://github.com/tyrylu/pyfmodex); [全文 / full text](#pyfmodex) |
 | six | 1.17.0 | MIT; [全文 / full text](#six) |
+| truststore | 0.10.5 | MIT; [source](https://github.com/sethmlarson/truststore); [全文 / full text](#truststore) |
 | `unrpyc` vendor | v2.0.4, commit `3ae8334ed71a05535927dcc559663d3aca51215b` | MIT plus BSD-3-Clause codegen; [全文 / full text](#unrpyc) |
 | PyInstaller bootloader | 6.21.0 | GPLv2-or-later with the PyInstaller exception for distributing non-free programs; [全文 / full text](#pyinstaller) |
 | AssetsTools.NET helpers | 3.0.4 / 3.0.2 | MIT; [全文 / full text](#assetstoolsnet), [全文 / full text](#assetstoolsnetaddressables) |
 | System.IO.Hashing helper dependency | 9.0.4 | MIT; [全文 / full text](#systemiohashing) |
-| .NET 9 runtime, embedded in the self-contained `NaninovelRepacker.exe` helper | .NET 9 (built with SDK 9.0.319) | Microsoft .NET Library license; [全文 / full text](#dotnet-runtime) |
+| .NET 9 runtime, embedded in the self-contained `NaninovelRepacker.exe` helper | .NET 9 (built with SDK 9.0.320) | Microsoft .NET Library license; [全文 / full text](#dotnet-runtime) |
 | jf-openhuninn font | 2.1 | SIL Open Font License 1.1; [全文 / full text](#ofl-11) |
 
 The executable does **not** bundle the FMOD Engine or any `fmod` binary; audio-format helpers of UnityPy that would require it are not shipped.
@@ -3839,6 +3840,32 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
+
+### truststore
+
+```
+The MIT License (MIT)
+
+Copyright (c) 2022 Seth Michael Larson
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 ```
 
 ### TypeTreeGeneratorAPI
