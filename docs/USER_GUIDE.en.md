@@ -133,7 +133,7 @@ Use the **Auto-translate (CLI/API)** window. DeepSeek is built in, and you can a
 
 1. Click **API endpoints…** at the top of the window and select DeepSeek on the left.
 2. Paste your key and click **Save key**. The model is `deepseek-flash` by default.
-3. For another service, click **Add endpoint**, enter the Base URL under **▶ Advanced settings**, then paste its key. Only https is allowed; http is allowed only for local addresses (127.0.0.1, localhost).
+3. For another service, click **Add endpoint**, enter the Base URL under **▶ Advanced settings**, then paste its key. Only https is allowed; http is allowed only for local addresses (127.0.0.1, [::1], localhost).
 4. Go back to the **Auto-translate (CLI/API)** window, select the API row in the detection table, and click **Test connection**. It fetches the model list, then sends one tiny request that spends a few tokens.
 5. Choose the range, batch limits, and retries, then click **Start auto-translation**.
 
